@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="/main.js" defer></script>
+    <title>Signup Now</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="even-column">
+        <div>
+          <h1>Already Signed up?</h1>
+          <p>
+            All users in OnBoard will know that there are millions of people out
+            there. Everyday besides so many people joining the community
+          </p>
+          <button>LOG IN</button>
+        </div>
+        <div>
+          <h1>Sign up for an Account</h1>
+          <p>
+            Let's get you all set up so you can start creating your first
+            OnBoard experience
+          </p>
+          <form action="">
+            <div>
+              <label for="first_name">
+                First Name
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="Enter you first Name"
+                />
+              </label>
+
+              <label for="last_name">
+                Last Name
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  placeholder="Enter you last Name"
+                />
+              </label>
+            </div>
+            <div>
+              <label for="email">
+                Email
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  pattern="([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z]+).(.+)"
+                  placeholder="Enter a valid email address"
+                />
+              </label>
+
+              <label for="phone"
+                >Phone
+                <input
+                  type="number"
+                  id="phone"
+                  name="phone"
+                  pattern=".?(\\d{3}).*(\\d{3}).*(\\d{4})"
+                  placeholder="Enter a valid phone number"
+                />
+              </label>
+            </div>
+            <div>
+              <label for="password">
+                Password
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter a strong password"
+                  min="8"
+                  max="30"
+                />
+              </label>
+
+              <label for="confirm_password">
+                Confirm Password
+                <input
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  placeholder="Confirm your password"
+                />
+              </label>
+            </div>
+
+            <input
+              type="checkbox"
+              name="terms_conditions"
+              id="terms_conditions"
+            />
+            <label for="terms_conditions"
+              >I accept OnBoard's <a href="#">Terms & Conditions</a></label
+            >
+
+            <button>SIGN UP</button>
+            <p>Or sign up using</p>
+            <div class="social-sign-up">
+              <a href="#" aria-label="google"
+                ><i class="fa-brands fa-google"></i></a
+              ><a href="#" aria-label="facebook"
+                ><i class="fa-brands fa-facebook-f"></i></a
+              ><a href="#" aria-label="twitter"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
