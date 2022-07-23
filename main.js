@@ -62,10 +62,7 @@ function checkInputs() {
   if (passwordValue === '') {
     setErrorMessage(password, 'Password cant be blank');
   } else if (!passwordRegex.test(passwordValue)) {
-    setErrorMessage(
-      password,
-      'Password must be minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character'
-    );
+    setErrorMessage(password, 'P@sswor1');
   } else setSuccesMessage(password);
   //confirm password valdilation
   if (confirmPasswordValue === '') {
