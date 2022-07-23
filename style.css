@@ -209,7 +209,7 @@ input[type='checkbox'] {
 .form-control i {
   visibility: hidden;
   position: absolute;
-  top: 40px;
+  top: 37px;
   right: 10px;
 }
 
@@ -227,13 +227,13 @@ input[type='checkbox'] {
   border-color: hsl(145, 63%, 49%);
 }
 .form-control.success i.fa-circle-check {
-  border-color: hsl(145, 63%, 49%);
+  color: hsl(145, 63%, 49%);
   visibility: visible;
 }
 .form-control.error input {
   border-color: hsl(6, 78%, 57%);
 }
 .form-control.error i.fa-circle-exclamation {
-  border-color: hsl(6, 78%, 57%);
+  color: hsl(6, 78%, 57%);
   visibility: visible;
 }
