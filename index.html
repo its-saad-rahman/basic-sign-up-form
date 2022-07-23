@@ -15,68 +15,85 @@
   <body>
     <div class="container">
       <div class="even-column">
-        <div>
-          <h1>Already Signed up?</h1>
-          <p>
-            All users in OnBoard will know that there are millions of people out
-            there. Everyday besides so many people joining the community
-          </p>
-          <button>LOG IN</button>
+        <div class="login flex-direction-column flex flex-justify-center">
+          <div class="text-align-center login-width">
+            <h1>Already Signed up?</h1>
+            <p>
+              All users in OnBoard will know that there are millions of people
+              out there. Everyday besides so many people joining the community
+            </p>
+            <button type="button" class="login-button">LOG IN</button>
+          </div>
         </div>
-        <div>
+        <div class="signup flex-column-center-gap">
           <h1>Sign up for an Account</h1>
           <p>
             Let's get you all set up so you can start creating your first
             OnBoard experience
           </p>
-          <form action="">
-            <div>
-              <label for="first_name">
-                First Name
+          <form action="#" class="flex-column-center-gap" id="form">
+            <div class="flex flex-justify-center flex-gap">
+              <div class="flex flex-direction-column form-control">
+                <label for="first_name"> First Name </label>
                 <input
                   type="text"
                   id="first_name"
                   name="first_name"
                   placeholder="Enter you first Name"
+                  required
                 />
-              </label>
-
-              <label for="last_name">
-                Last Name
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Error massage</p>
+              </div>
+              <div class="flex flex-direction-column form-control">
+                <label for="last_name"> Last Name </label>
                 <input
                   type="text"
                   id="last_name"
                   name="last_name"
                   placeholder="Enter you last Name"
+                  required
                 />
-              </label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Error massage</p>
+              </div>
             </div>
-            <div>
-              <label for="email">
-                Email
+            <div class="flex flex-justify-center flex-gap">
+              <div class="flex flex-direction-column form-control">
+                <label for="email"> Email </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   pattern="([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z]+).(.+)"
                   placeholder="Enter a valid email address"
+                  required
                 />
-              </label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Error massage</p>
+              </div>
 
-              <label for="phone"
-                >Phone
+              <div class="flex flex-direction-column form-control">
+                <label for="phone">Phone </label>
                 <input
                   type="number"
                   id="phone"
                   name="phone"
                   pattern=".?(\\d{3}).*(\\d{3}).*(\\d{4})"
                   placeholder="Enter a valid phone number"
+                  required
                 />
-              </label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Error massage</p>
+              </div>
             </div>
-            <div>
-              <label for="password">
-                Password
+            <div class="flex flex-justify-center flex-gap">
+              <div class="flex flex-direction-column form-control">
+                <label for="password"> Password </label>
                 <input
                   type="password"
                   id="password"
@@ -84,30 +101,40 @@
                   placeholder="Enter a strong password"
                   min="8"
                   max="30"
+                  required
                 />
-              </label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Error massage</p>
+              </div>
 
-              <label for="confirm_password">
-                Confirm Password
+              <div class="flex flex-direction-column form-control">
+                <label for="confirm_password"> Confirm Password </label>
                 <input
                   type="password"
                   id="confirm_password"
                   name="confirm_password"
                   placeholder="Confirm your password"
+                  required
                 />
-              </label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Error massage</p>
+              </div>
             </div>
 
-            <input
-              type="checkbox"
-              name="terms_conditions"
-              id="terms_conditions"
-            />
-            <label for="terms_conditions"
-              >I accept OnBoard's <a href="#">Terms & Conditions</a></label
-            >
-
-            <button>SIGN UP</button>
+            <div>
+              <input
+                type="checkbox"
+                name="terms_conditions"
+                id="terms_conditions"
+              />
+              <label for="terms_conditions">
+                I accept the Terms & Conditions
+              </label>
+              <p>Read our <a href="#"> Terms & Conditions</a></p>
+            </div>
+            <button class="signup-button">SIGN UP</button>
             <p>Or sign up using</p>
             <div class="social-sign-up">
               <a href="#" aria-label="google"
