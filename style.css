@@ -190,14 +190,22 @@ input::placeholder {
 input[type='checkbox'] {
   width: 10px;
 }
-
+.social-sign-up {
+  margin-top: 1em;
+}
 .social-sign-up a {
   padding: 1em 1.5em;
   border: 1px solid black;
   border-radius: 0.5em;
   font-size: 1.1rem;
   color: var(--clr-primary);
-  margin-top: 1em;
+  transition: background 0.5s ease-in-out;
+}
+.social-sign-up a:hover {
+  background: var(--clr-primary);
+  color: white;
+
+  border: 1px solid var(--clr-primary);
 }
 .social-sign-up a:nth-child(even) {
   margin: 0 1em;
