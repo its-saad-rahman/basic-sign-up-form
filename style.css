@@ -3,14 +3,14 @@
 :root {
   --clr-primary: hsl(229, 70%, 53%);
   --clr-heading: hsl(227, 31%, 23%);
-  --clr-desc: hsl(229, 13%, 58%);
-  --clr-placeholder: hsl(226, 23%, 73%);
+  --clr-desc: hsl(226, 23%, 73%);
+  --clr-placeholder: hsl(229, 13%, 58%);
 
   --ff: 'Josefin Sans';
   --fw-heading: 700;
   --fw-paragraph: 400;
 
-  --gap: 10px;
+  --gap: 1em;
 }
 
 /* RESET */
@@ -89,10 +89,6 @@ select {
   }
 }
 /* Utility Class */
-@font-face {
-  font-family: 'Norse Bold';
-  src: url(./font/Norse-Bold.otf);
-}
 
 .flex {
   display: flex;
@@ -105,4 +101,139 @@ select {
 }
 .flex-gap {
   gap: var(--gap);
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-align-center {
+  align-content: center;
+}
+.even-column {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column-center-gap {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: var(--gap);
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+/* styles */
+* {
+  font-family: var(--ff), sans-serif;
+}
+.login {
+  background: var(--clr-primary);
+  height: 100vh;
+  clip-path: polygon(0 0%, 100% 0%, 85% 100%, 0% 100%);
+  color: white;
+}
+
+.login-width {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+.login-width > p {
+  max-width: 500px;
+  color: var(--clr-desc);
+}
+
+.login-button {
+  cursor: pointer;
+  padding: 1em 5em;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 100vw;
+  color: white;
+  font-weight: bold;
+}
+.signup-button {
+  padding: 1em 10em;
+  color: white;
+  background: var(--clr-primary);
+  border-radius: 100vw;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.signup-button:hover {
+  box-shadow: inset 0px 15px 25px hsla(227, 31%, 23%, 0.5);
+}
+
+.signup {
+  width: 800px;
+}
+
+input {
+  padding: 0.5em;
+  border: 1px solid #666;
+  border-radius: 4px;
+  width: 280px;
+}
+input::placeholder {
+  color: var(--clr-placeholder);
+}
+input[type='checkbox'] {
+  width: 10px;
+}
+
+.social-sign-up a {
+  padding: 1em 1.5em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  font-size: 1.1rem;
+  color: var(--clr-primary);
+  margin-top: 1em;
+}
+.social-sign-up a:nth-child(even) {
+  margin: 0 1em;
+}
+.form-control {
+  position: relative;
+  padding-bottom: 20px;
+}
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form-control p {
+  visibility: hidden;
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+}
+.form-control.error p {
+  color: hsl(6, 78%, 57%);
+  visibility: visible;
+}
+.form-control.success input {
+  border-color: hsl(145, 63%, 49%);
+}
+.form-control.success i.fa-circle-check {
+  border-color: hsl(145, 63%, 49%);
+  visibility: visible;
+}
+.form-control.error input {
+  border-color: hsl(6, 78%, 57%);
+}
+.form-control.error i.fa-circle-exclamation {
+  border-color: hsl(6, 78%, 57%);
+  visibility: visible;
 }
